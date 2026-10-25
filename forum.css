@@ -1305,8 +1305,8 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     margin-left: auto;
     padding: 0;
     border: 1px solid transparent;
@@ -1322,20 +1322,23 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
     border-color: rgba(232, 221, 200, .2);
 }
 
-/* Chevron dessiné en CSS */
+/* Chevron ouvert : pointe vers le haut */
 .atr-category-chevron {
-    width: 8px;
-    height: 8px;
-    border-right: 1.5px solid currentColor;
-    border-bottom: 1.5px solid currentColor;
-    transform: rotate(225deg);
+    display: block;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(3px) rotate(225deg);
     transition: transform .3s ease;
 }
 
-/* Chevron vers le bas lorsque la catégorie est fermée */
+/* Chevron fermé : pointe vers le bas */
 .atr-category-collapsed .atr-category-chevron {
-    transform: rotate(45deg);
+    transform: translateY(-3px) rotate(45deg);
 }
+
 
 /* Masquer les forums */
 .atr-category .atr-forums[hidden] {
