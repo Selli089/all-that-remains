@@ -1288,66 +1288,85 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
 }
 
 
+
 /* ========================================
    ALL THAT REMAINS — CATÉGORIES REPLIABLES
 ======================================== */
 
-/* Positionnement du titre et du bouton */
-.atr-category-title {
+/* Titre de catégorie */
+.atr-category .atr-category-title {
     display: flex;
     align-items: center;
+    width: 100%;
     gap: 15px;
 }
 
-/* Bouton discret */
-.atr-category-toggle {
-    display: flex;
+/* Bouton afficher / masquer */
+.atr-category .atr-category-toggle {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    flex: 0 0 32px;
     width: 32px;
     height: 32px;
     margin-left: auto;
     padding: 0;
-    border: 1px solid transparent;
+    border: 1px solid rgba(232, 221, 200, .15);
     border-radius: 50%;
     background: transparent;
     color: #b2a98a;
     cursor: pointer;
+    font-size: 0;
+    line-height: 1;
     transition: background .25s ease, border-color .25s ease;
 }
 
-.atr-category-toggle:hover {
-    background: rgba(232, 221, 200, .06);
-    border-color: rgba(232, 221, 200, .2);
+/* Survol */
+.atr-category .atr-category-toggle:hover {
+    background: rgba(232, 221, 200, .08);
+    border-color: rgba(232, 221, 200, .35);
 }
 
-/* Chevron ouvert : pointe vers le haut */
+/* Supprimer l'ancien chevron */
 .atr-category-chevron {
+    display: none !important;
+}
+
+/* Catégorie ouverte : pointe vers le haut */
+.atr-category .atr-category-toggle::after {
+    content: "⌃";
     display: block;
-    width: 10px;
-    height: 10px;
-    box-sizing: border-box;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: translateY(3px) rotate(225deg);
-    transition: transform .3s ease;
+    position: static;
+    width: auto;
+    height: auto;
+    border: 0;
+    background: none;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    transform: translateY(4px);
 }
 
-/* Chevron fermé : pointe vers le bas */
-.atr-category-collapsed .atr-category-chevron {
-    transform: translateY(-3px) rotate(45deg);
+/* Catégorie fermée : pointe vers le bas */
+.atr-category.atr-category-collapsed .atr-category-toggle::after {
+    content: "⌄";
+    transform: translateY(-4px);
 }
 
-
-/* Masquer les forums */
+/* Masquer les forums des catégories fermées */
 .atr-category .atr-forums[hidden] {
     display: none !important;
 }
 
+/* Accessibilité */
+.atr-category .atr-category-toggle:focus-visible {
+    outline: 2px solid #b2a98a;
+    outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .atr-category-toggle,
-    .atr-category-chevron {
+    .atr-category .atr-category-toggle {
         transition: none;
     }
 }
+
