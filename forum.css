@@ -1389,3 +1389,30 @@ html[data-color-scheme="dark"]
 }
 
 
+/* ========================================
+   ALL THAT REMAINS — FORUMS UNIFORMISÉS
+======================================== */
+
+/* Chaque ligne s'adapte au forum le plus haut */
+.atr-forums {
+    align-items: stretch;
+}
+
+/* Chaque forum occupe toute la hauteur disponible */
+.atr-forum {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
+/* Les informations internes occupent l'espace disponible */
+.atr-forum .forum-content {
+    flex: 1;
+    min-height: 0;
+}
+
+/* Les statistiques restent en bas */
+.atr-forum .forum-stats {
+    margin-top: auto;
+}
