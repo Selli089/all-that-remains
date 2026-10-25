@@ -1161,3 +1161,13 @@ html[data-color-scheme="dark"] .atr-record.atr-character {--reg-paper:#222c25;--
   .atr-character .atr-char-question > .atr-char-label, .atr-character .atr-char-question > .atr-char-text {flex-basis:100%;}
   .atr-character .atr-char-trait {flex-basis:100%;}
 }
+
+/* Liste des sujets — Suppression de l’icône */
+.topicslist_row .topicslist-img {display:none;}
+
+/* Fond végétal des sujets non lus */
+.topicslist_row {position:relative;isolation:isolate;}
+.topicslist_row:is(.post_new,.folder_new)::before {content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:url("https://i.ibb.co/q3V5Bnnq/Nouveau-message.png") center/cover no-repeat;opacity:.3;filter:saturate(.65);}
+
+/* Thème sombre */
+html[data-color-scheme="dark"] .topicslist_row:is(.post_new,.folder_new)::before {opacity:.2;filter:saturate(.55) brightness(.8);}
