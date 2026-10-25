@@ -548,6 +548,9 @@ html[data-color-scheme="dark"] .atr-category {--atr-surface:#202b24;--atr-headin
 @media (max-width: 600px) {
   #blanktheme .main_forum {width:calc(100% - 32px);padding-left:12px;padding-right:12px;}
 }
+/* Catégories — Cartes de hauteur uniforme */
+.atr-category .atr-forums {align-items:stretch;grid-auto-rows:1fr;}
+.atr-category .atr-forum {height:100%;grid-template-rows:1fr auto auto;align-content:stretch;}
 
 /* ==========================================================================
    28 — Switcheroo fixé en bas et centrage du bouton de thème
