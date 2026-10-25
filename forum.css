@@ -1171,3 +1171,8 @@ html[data-color-scheme="dark"] .atr-record.atr-character {--reg-paper:#222c25;--
 
 /* Thème sombre */
 html[data-color-scheme="dark"] .topicslist_row:is(.post_new,.folder_new)::before {opacity:.2;filter:saturate(.55) brightness(.8);}
+
+/* Liste des sujets — Avatar du dernier posteur en cercle */
+.topicslist_row .topicslist-avatar-lastpost {flex:0 0 50px;width:50px;height:50px;padding:0;border-radius:50%;overflow:hidden;}
+.topicslist_row .topicslist-avatar-lastpost a {display:block;width:100%;height:100%;border-radius:50%;}
+.topicslist_row .topicslist-avatar-lastpost img {display:block;width:50px;height:50px;max-width:none;max-height:none;margin:0;border-radius:50%;object-fit:cover;}
