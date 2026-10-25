@@ -1200,3 +1200,76 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
 
 /* Déchus */
 :is(.group-7,a[href*="/g7-"]) {color:var(--atr-group-7)!important;}
+
+
+/* Descriptions interactives des groupes */
+
+#atr-group-description {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows .4s ease, opacity .3s ease;
+  margin-top: 0;
+  text-align: center;
+}
+
+#atr-group-description.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.atr-group-description-inner {
+  min-height: 0;
+  overflow: hidden;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.atr-group-description-title {
+  color: #e8ddc8;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#atr-group-description p {
+  color: #c6c8b8;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+  padding: 0 15px 15px;
+}
+
+.atr-active {
+  text-decoration: underline !important;
+  text-underline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #atr-group-description {
+    transition: none;
+  }
+}
+
+
+/* Séparateurs entre les groupes */
+
+.atr-group-separator {
+  color: #a69e7c;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+/* Liens des groupes */
+
+.atr-active {
+  text-decoration: underline !important;
+  text-underline-offset: 5px;
+}
+
+.atr-group-separator,
+.atr-active {
+  transition: all .25s ease;
+}
