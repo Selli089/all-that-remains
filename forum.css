@@ -1289,6 +1289,7 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
 
 
 
+
 /* ========================================
    ALL THAT REMAINS — CATÉGORIES REPLIABLES
 ======================================== */
@@ -1301,30 +1302,43 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
     gap: 15px;
 }
 
-/* Bouton afficher / masquer */
+/* Bouton afficher / masquer — sans cercle */
 .atr-category .atr-category-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 32px;
-    width: 32px;
-    height: 32px;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 28px;
     margin-left: auto;
     padding: 0;
-    border: 1px solid rgba(232, 221, 200, .15);
-    border-radius: 50%;
+    border: none;
+    border-radius: 0;
     background: transparent;
-    color: #b2a98a;
+    box-shadow: none;
+    color: #727d61;
     cursor: pointer;
     font-size: 0;
     line-height: 1;
-    transition: background .25s ease, border-color .25s ease;
+    transition: color .25s ease;
+}
+
+/* Thème sombre */
+html[data-color-scheme="dark"]
+.atr-category .atr-category-toggle {
+    color: #aaa178;
 }
 
 /* Survol */
 .atr-category .atr-category-toggle:hover {
-    background: rgba(232, 221, 200, .08);
-    border-color: rgba(232, 221, 200, .35);
+    background: transparent;
+    border: none;
+    color: #927044;
+}
+
+html[data-color-scheme="dark"]
+.atr-category .atr-category-toggle:hover {
+    color: #e8ddc8;
 }
 
 /* Supprimer l'ancien chevron */
@@ -1348,7 +1362,8 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
 }
 
 /* Catégorie fermée : pointe vers le bas */
-.atr-category.atr-category-collapsed .atr-category-toggle::after {
+.atr-category.atr-category-collapsed
+.atr-category-toggle::after {
     content: "⌄";
     transform: translateY(-4px);
 }
@@ -1358,15 +1373,17 @@ html[data-color-scheme="dark"] {--atr-group-8:#d3aadf;--atr-group-3:#b2c68c;--at
     display: none !important;
 }
 
-/* Accessibilité */
+/* Accessibilité clavier */
 .atr-category .atr-category-toggle:focus-visible {
-    outline: 2px solid #b2a98a;
+    outline: 1px solid currentColor;
     outline-offset: 3px;
 }
 
+/* Réduction des animations */
 @media (prefers-reduced-motion: reduce) {
     .atr-category .atr-category-toggle {
         transition: none;
     }
 }
+
 
