@@ -1348,24 +1348,25 @@ html[data-color-scheme="dark"]
 
 /* Catégorie ouverte : pointe vers le haut */
 .atr-category .atr-category-toggle::after {
-    content: "⌃";
+    content: "";
     display: block;
     position: static;
-    width: auto;
-    height: auto;
+    flex-shrink: 0;
+    width: 11px;
+    height: 11px;
     border: 0;
+    border-top: 1.5px solid currentColor;
+    border-left: 1.5px solid currentColor;
     background: none;
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    line-height: 1;
-    transform: translateY(4px);
+    transform: translateY(3px) rotate(45deg) scaleY(.65);
+    transition: transform .25s ease;
 }
 
 /* Catégorie fermée : pointe vers le bas */
 .atr-category.atr-category-collapsed
 .atr-category-toggle::after {
-    content: "⌄";
-    transform: translateY(-4px);
+     content: "";
+    transform: translateY(-3px) rotate(225deg) scaleY(.65);
 }
 
 /* Masquer les forums des catégories fermées */
