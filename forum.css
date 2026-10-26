@@ -1414,3 +1414,39 @@ html[data-color-scheme="dark"]
    font:500 9px "Montserrat",sans-serif;
    letter-spacing:1px;text-transform:uppercase;
 }
+
+/* ==========================================================================
+   Description placée sous le titre d’une catégorie
+   ========================================================================== */
+
+/* Cache le texte à son emplacement d’origine avant son déplacement. */
+.atr-category-description-source {
+    display: none;
+}
+
+/* Encadré de description. */
+.atr-category-description {
+    margin: 0 0 24px;
+    padding: 18px 22px;
+    border: 1px solid var(--atr-rule);
+    border-left: 3px solid var(--atr-accent);
+    color: inherit;
+    font-size: 13px;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+/* Titre de l’avertissement. */
+.atr-category-description > strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--atr-accent);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.atr-category-description > p {
+    margin: 0;
+}
