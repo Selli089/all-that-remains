@@ -1508,3 +1508,58 @@ html[data-color-scheme="dark"]
     margin: 0;
     accent-color: var(--atr-accent);
 }
+
+/* ==========================================================================
+   Groupes — Dimensions et ordre des éléments des cartes
+   ========================================================================== */
+
+/* Conserve une largeur régulière même avec peu de membres. */
+.atr-group-members .userlist {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+}
+
+/* Impose une disposition verticale pour chaque carte. */
+.atr-group-members .userlist_profil.atr-group-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Les informations participent directement à l’ordre de la carte. */
+.atr-group-members .atr-group-card .userlist_details {
+    display: contents;
+}
+
+.atr-group-members .atr-group-card .userlist_pseudo {
+    order: 0;
+}
+
+.atr-group-members .atr-group-card .userlist_avatar {
+    order: 1;
+}
+
+.atr-group-members .atr-group-card .userlist_infos {
+    order: 2;
+}
+
+.atr-group-members .atr-group-card .userlist_contact {
+    order: 3;
+}
+
+/* Sélection tout en bas, avec une case bien visible. */
+.atr-group-members .atr-group-card .atr-group-select {
+    display: inline-flex;
+    order: 4;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.atr-group-members .atr-group-select input[type="checkbox"] {
+    display: inline-block;
+    appearance: auto;
+    position: static;
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+}
