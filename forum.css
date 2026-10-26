@@ -1399,3 +1399,18 @@ html[data-color-scheme="dark"]
         transition: none;
     }
 }
+
+/* Catégorie contenant au moins un forum avec des messages non lus */
+.atr-category:has(.atr-forum.forum_new) .atr-category-title h2::after {
+   content:"Nouveau";
+   display:inline-block;
+   vertical-align:middle;
+   margin-left:14px;
+   padding:4px 8px;
+   border:1px solid currentColor;
+   border-radius:3px;
+   background:var(--atr-hover);
+   color:var(--atr-accent);
+   font:500 9px "Montserrat",sans-serif;
+   letter-spacing:1px;text-transform:uppercase;
+}
