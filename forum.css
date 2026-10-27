@@ -6047,3 +6047,28 @@ tw:focus-visible {
         transition: none;
     }
 }
+
+/* TW — Maintenir le texte dans la phrase */
+#blanktheme tw,
+#blanktheme tw .atr-tw-content {
+    display: inline !important;
+    filter: none !important;
+    color: transparent;
+    text-shadow: 0 0 7px var(--textColor, #343b33);
+}
+
+/* Texte dévoilé après clic, appui ou activation au clavier */
+#blanktheme tw.atr-tw-open,
+#blanktheme tw.atr-tw-open .atr-tw-content {
+    color: var(--textColor, #343b33);
+    text-shadow: none;
+}
+
+/* Texte dévoilé au survol */
+@media (hover: hover) {
+    #blanktheme tw:hover,
+    #blanktheme tw:hover .atr-tw-content {
+        color: var(--textColor, #343b33);
+        text-shadow: none;
+    }
+}
