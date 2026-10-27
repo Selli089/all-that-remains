@@ -6004,8 +6004,11 @@ html[data-color-scheme="dark"] .atr-group-members {
 /* ==========================================================================
    TW — Texte flouté jusqu’au survol ou à l’activation
    ========================================================================== */
+/* ==========================================================================
+   TW — Texte flouté
+   ========================================================================== */
 
-/* Avant l’initialisation du script, le texte est déjà flouté. */
+/* Le texte est flouté dès l’affichage de la page. */
 tw {
     display: inline-block;
     max-width: 100%;
@@ -6013,7 +6016,14 @@ tw {
     filter: blur(6px);
 }
 
-/* Une fois le script chargé, seul le contenu est flouté. */
+/* Le survol fonctionne aussi avant l’initialisation du script. */
+@media (hover: hover) {
+    tw:hover {
+        filter: none;
+    }
+}
+
+/* Lorsque le script est actif, le flou est appliqué au contenu. */
 tw[data-tw-ready] {
     filter: none;
 }
@@ -6026,25 +6036,24 @@ tw .atr-tw-content {
     transition: filter 0.2s ease;
 }
 
-/* Texte révélé après un clic, un appui ou une activation au clavier. */
+/* Dévoilement par clic, appui tactile ou clavier. */
 tw.atr-tw-open .atr-tw-content {
     filter: none;
 }
 
-/* Survol pour les appareils qui disposent d’une souris. */
+/* Dévoilement au survol avec une souris. */
 @media (hover: hover) {
     tw:hover .atr-tw-content {
         filter: none;
     }
 }
 
-/* Indication pour les personnes naviguant au clavier. */
+/* Repère pour la navigation au clavier. */
 tw:focus-visible {
     outline: 2px solid #727d61;
     outline-offset: 3px;
 }
 
-/* Respect de la préférence de réduction des animations. */
 @media (prefers-reduced-motion: reduce) {
     tw .atr-tw-content {
         transition: none;
