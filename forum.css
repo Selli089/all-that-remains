@@ -6004,47 +6004,35 @@ html[data-color-scheme="dark"] .atr-group-members {
 /* ==========================================================================
    TW — Texte flouté jusqu’au survol ou à l’activation
    ========================================================================== */
-/* ==========================================================================
-   TW — Texte flouté
-   ========================================================================== */
 
-/* Le texte est flouté dès l’affichage de la page. */
 tw {
-    display: inline-block;
-    max-width: 100%;
+    display: inline;
     cursor: pointer;
-    filter: blur(6px);
+    color: transparent;
+    text-shadow: 0 0 7px var(--textColor, #343b33);
 }
 
-/* Le survol fonctionne aussi avant l’initialisation du script. */
-@media (hover: hover) {
-    tw:hover {
-        filter: none;
-    }
-}
-
-/* Lorsque le script est actif, le flou est appliqué au contenu. */
-tw[data-tw-ready] {
-    filter: none;
-}
-
+/* Le contenu ajouté par le JavaScript reste lui aussi dans la phrase. */
 tw .atr-tw-content {
-    display: inline-block;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    filter: blur(6px);
-    transition: filter 0.2s ease;
+    display: inline;
+    color: transparent;
+    text-shadow: 0 0 7px var(--textColor, #343b33);
+    transition: text-shadow 0.2s ease;
 }
 
-/* Dévoilement par clic, appui tactile ou clavier. */
+/* Dévoilement au clic, au toucher ou au clavier. */
+tw.atr-tw-open,
 tw.atr-tw-open .atr-tw-content {
-    filter: none;
+    color: inherit;
+    text-shadow: none;
 }
 
-/* Dévoilement au survol avec une souris. */
+/* Dévoilement au passage de la souris. */
 @media (hover: hover) {
+    tw:hover,
     tw:hover .atr-tw-content {
-        filter: none;
+        color: inherit;
+        text-shadow: none;
     }
 }
 
