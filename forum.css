@@ -6374,3 +6374,41 @@ tw:focus-visible {
 #wombat .atr-profile-contact .field_uneditable a:hover {
     background: var(--profile-inset);
 }
+
+/* ==========================================================
+   Wombat — Libellés lisibles en clair et en sombre
+   ========================================================== */
+
+#wombat.atr-profile .atr-profile-fields .profile_field > label,
+#wombat.atr-profile .atr-profile-fields .profile_field > label * {
+    color: var(--profile-muted, #696b5d) !important;
+}
+
+/* ==========================================================
+   Wombat — Boutons de contact
+   ========================================================== */
+
+#wombat.atr-profile .atr-profile-contact > div {
+    width: 100%;
+    min-width: 0;
+}
+
+#wombat.atr-profile .atr-profile-contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--profile-rule);
+    color: var(--profile-text);
+    font: 10px/1.4 "Montserrat", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+#wombat.atr-profile .atr-profile-contact a:hover {
+    background: var(--profile-inset);
+}
