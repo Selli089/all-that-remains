@@ -1779,6 +1779,15 @@ blockquote cite a {
     display: none;
 }
 
+/* Wombat — Lisibilité des champs de profil */
+
+#wombat .atr-profile .field_label,
+#wombat .atr-profile .field_label *,
+#wombat .atr-profile .field_name,
+#wombat .atr-profile .field_name * {
+    color: var(--profile-muted, #b6b29f) !important;
+}
+
 /* ==========================================================================
    22 — Liste des membres : base
    ========================================================================== */
