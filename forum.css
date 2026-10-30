@@ -6185,14 +6185,19 @@ tw:focus-visible {
     display: none;
 }
 
+/* Triangles du dossier personnel */
+
 .atr-post .atr-mini-chevron {
-    font-size: 17px;
-    line-height: 1;
-    transition: transform .2s ease;
+    font-size: 0;
 }
 
-.atr-post .atr-mini-details[open] .atr-mini-chevron {
-    transform: rotate(180deg);
+.atr-post .atr-mini-chevron::before {
+    content: "\25B4"; /* ▴ — fermé */
+    font: 16px/1 Georgia, serif;
+}
+
+.atr-post .atr-mini-details[open] .atr-mini-chevron::before {
+    content: "\25BF"; /* ▿ — ouvert */
 }
 
 .atr-post .atr-mini-extra {
