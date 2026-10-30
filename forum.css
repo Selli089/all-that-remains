@@ -1779,13 +1779,13 @@ blockquote cite a {
     display: none;
 }
 
-/* Wombat — Lisibilité des champs de profil */
+/* Wombat — Lisibilité des intitulés en mode sombre */
 
-#wombat .atr-profile .field_label,
-#wombat .atr-profile .field_label *,
-#wombat .atr-profile .field_name,
-#wombat .atr-profile .field_name * {
-    color: var(--profile-muted, #b6b29f) !important;
+html[data-color-scheme="dark"] #wombat .atr-profile-info .label,
+html[data-color-scheme="dark"] #wombat .atr-profile-info dt,
+html[data-color-scheme="dark"] #wombat .atr-profile-info .field_label,
+html[data-color-scheme="dark"] #wombat .atr-profile-info .field_name {
+    color: #b6b29f !important;
 }
 
 /* ==========================================================================
