@@ -6319,3 +6319,24 @@ tw:focus-visible {
     border-bottom: 0;
     text-align: center;
 }
+
+/* Liens de contact — mini-profil */
+
+.atr-post .atr-post-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+}
+
+.atr-post .atr-post-contacts .atr-contact-item {
+    display: block;
+    width: 100%;
+}
+
+.atr-post .atr-post-contacts .atr-contact-item a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
