@@ -3211,14 +3211,14 @@ body#blanktheme::after {
 body#blanktheme::before {
     left: 0;
     width: min(386px, 22vw);
-    background-image: url("https://i.ibb.co/hTCL7g4/Bord-Gauche.png");
+    background-image: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351149/Bord-Gauche.png");
     background-position: left top;
 }
 
 body#blanktheme::after {
     right: 0;
     width: min(431px, 24vw);
-    background-image: url("https://i.ibb.co/MDSdqL6t/Bord-droit.png");
+    background-image: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351149/Bord-droit.png");
     background-position: right top;
 }
 
@@ -4435,7 +4435,7 @@ html[data-color-scheme="dark"] .atr-welcome-secondary > div + div {
     height: 380px;
     z-index: -1;
     pointer-events: none;
-    background: url("https://i.ibb.co/1p3KcKZ/3.png") center bottom/contain no-repeat;
+    background: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351392/3.png") center bottom/contain no-repeat;
     transform: rotate(-12deg);
     transform-origin: center bottom;
     opacity: .45;
@@ -4473,7 +4473,7 @@ html[data-color-scheme="dark"] #wombat.atr-profile::before {
     height: 380px;
     z-index: -1;
     pointer-events: none;
-    background: url("https://i.ibb.co/1p3KcKZ/3.png") center bottom/contain no-repeat;
+    background: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351392/3.png") center bottom/contain no-repeat;
     transform: rotate(-12deg) scale(-1,-1);
     transform-origin: center;
     opacity: .45;
@@ -4518,7 +4518,7 @@ html[data-color-scheme="dark"] #wombat.atr-profile::after {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: url("https://i.ibb.co/0yJKVBZb/Premade-border-5.png") center top/100% auto no-repeat;
+    background: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351423/Premade-border_5.png") center top/100% auto no-repeat;
     opacity: .4;
     filter: saturate(.65);
     -webkit-mask-image: linear-gradient(to bottom,#000 0%,#000 45%,transparent 90%);
@@ -5465,7 +5465,7 @@ html[data-color-scheme="dark"] .atr-record.atr-character {
     z-index: -1;
     border-radius: inherit;
     pointer-events: none;
-    background: url("https://i.ibb.co/q3V5Bnnq/Nouveau-message.png") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/lffofll0/image/upload/v1793351150/Nouveau-message.png") center/cover no-repeat;
     opacity: .3;
     filter: saturate(.65);
 }
