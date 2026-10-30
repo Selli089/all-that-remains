@@ -6126,3 +6126,102 @@ tw:focus-visible {
     flex-shrink: 0;
     align-self: flex-start;
 }
+
+
+/* ==========================================================
+   52 — ALL THAT REMAINS / MINI-PROFIL DES PERSONNAGES
+   ========================================================== */
+
+.atr-post .atr-character-info {
+    text-align: left;
+    font: 11px/1.7 "Montserrat", sans-serif;
+}
+
+.atr-post .atr-mini-section {
+    margin-bottom: 14px;
+}
+
+.atr-post .atr-mini-heading {
+    margin-bottom: 10px;
+    color: var(--post-accent);
+    font: 600 9px/1.5 "Montserrat", sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.atr-post .atr-mini-essential .user_field,
+.atr-post .atr-mini-extra .user_field {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--post-rule);
+}
+
+.atr-post .atr-mini-essential .user_field:last-child,
+.atr-post .atr-mini-extra .user_field:last-child {
+    border-bottom: 0;
+}
+
+/* Dossier dépliant */
+
+.atr-post .atr-mini-details {
+    margin: 12px 0;
+    border: 1px solid var(--post-rule);
+}
+
+.atr-post .atr-mini-details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 12px;
+    background: var(--post-inset);
+    color: var(--post-accent);
+    font: 600 9px/1.5 "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.atr-post .atr-mini-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.atr-post .atr-mini-chevron {
+    font-size: 17px;
+    line-height: 1;
+    transition: transform .2s ease;
+}
+
+.atr-post .atr-mini-details[open] .atr-mini-chevron {
+    transform: rotate(180deg);
+}
+
+.atr-post .atr-mini-extra {
+    padding: 10px 12px;
+}
+
+/* Note personnelle */
+
+.atr-post .atr-mini-quote {
+    margin: 18px 0 8px;
+    padding: 12px 0;
+    border-top: 1px solid var(--post-rule);
+    border-bottom: 1px solid var(--post-rule);
+}
+
+.atr-post .atr-mini-quote-content {
+    color: var(--post-text);
+    font: italic 15px/1.5 "Cormorant Garamond", serif;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.atr-post .atr-mini-quote-content p {
+    margin: 0;
+}
+
+/* Accessibilité */
+
+.atr-post .atr-mini-details summary:focus-visible {
+    outline: 2px solid var(--post-accent);
+    outline-offset: 3px;
+}
