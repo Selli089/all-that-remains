@@ -6256,8 +6256,11 @@ tw:focus-visible {
     font: 11px/1.6 "Montserrat", sans-serif;
 }
 
-.atr-post .field_label {
-    color: var(--post-muted);
+/* Libellés des champs — thèmes clair et sombre */
+
+.atr-post .atr-character-info .user_field .field_label,
+.atr-post .atr-character-info .user_field .field_label * {
+    color: var(--post-muted) !important;
     font-weight: 600;
 }
 
