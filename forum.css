@@ -6340,3 +6340,28 @@ tw:focus-visible {
     justify-content: center;
     text-align: center;
 }
+
+
+/* ==========================================================
+   Wombat — Liens de contact nommés
+   ========================================================== */
+
+#wombat .atr-profile-contact .field_uneditable a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--profile-rule);
+    color: var(--profile-text);
+    font: 10px/1.4 "Montserrat", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+#wombat .atr-profile-contact .field_uneditable a:hover {
+    background: var(--profile-inset);
+}
