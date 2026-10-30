@@ -6225,3 +6225,89 @@ tw:focus-visible {
     outline: 2px solid var(--post-accent);
     outline-offset: 3px;
 }
+
+
+/* ==========================================================
+   53 — MINI-PROFIL / AJUSTEMENTS VISUELS
+   ========================================================== */
+
+/* Titres des sections */
+.atr-post .atr-mini-heading {
+    margin: 0 0 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--post-rule);
+    color: var(--post-accent);
+    font: 600 10px/1.5 "Montserrat", sans-serif;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+/* Champs d'identité */
+.atr-post .atr-mini-essential .user_field,
+.atr-post .atr-mini-extra .user_field {
+    display: block;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--post-rule);
+    font: 11px/1.6 "Montserrat", sans-serif;
+}
+
+.atr-post .field_label {
+    color: var(--post-muted);
+    font-weight: 600;
+}
+
+.atr-post .field_content {
+    color: var(--post-text);
+}
+
+/* Bouton du dossier */
+.atr-post .atr-mini-details {
+    margin: 18px 0;
+    border: 1px solid var(--post-rule);
+    background: var(--post-bg);
+}
+
+.atr-post .atr-mini-details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+    background: var(--post-inset);
+    color: var(--post-accent);
+    font: 600 10px/1.5 "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.atr-post .atr-mini-details summary:hover {
+    background: var(--post-inset);
+    filter: brightness(.96);
+}
+
+.atr-post .atr-mini-details[open] summary {
+    border-bottom: 1px solid var(--post-rule);
+}
+
+.atr-post .atr-mini-extra {
+    padding: 8px 12px;
+}
+
+/* Citation personnelle */
+.atr-post .atr-mini-quote {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid var(--post-rule);
+    border-bottom: 1px solid var(--post-rule);
+}
+
+.atr-post .atr-mini-quote-content {
+    color: var(--post-text);
+    font: italic 18px/1.4 "Cormorant Garamond", serif;
+    text-align: center;
+}
+
+.atr-post .atr-mini-quote .atr-mini-heading {
+    border-bottom: 0;
+    text-align: center;
+}
