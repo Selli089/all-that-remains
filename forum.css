@@ -3521,9 +3521,7 @@ html[data-color-scheme="dark"] .atr-welcome-secondary {
     gap: 10px;
     align-items: flex-start;
     text-align: left;
-    margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid var(--pa-rule);
 }
 
 .atr-weather>i {
@@ -6486,9 +6484,6 @@ tw:focus-visible {
 }
 
 /* Espace avant la météo. */
-.atr-welcome-calendar .atr-weather {
-    margin-top: 16px;
-}
 
 .atr-welcome-calendar .atr-weather-description {
     margin-top: 6px;
@@ -6549,9 +6544,7 @@ tw:focus-visible {
 
 .atr-welcome-calendar .atr-weather-report {
     display: block;
-    margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid var(--pa-rule);
     text-align: left;
 }
 
