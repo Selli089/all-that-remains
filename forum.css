@@ -6412,3 +6412,110 @@ tw:focus-visible {
 #wombat.atr-profile .atr-profile-contact a:hover {
     background: var(--profile-inset);
 }
+
+/* ==========================================================================
+   Accueil — Calendrier du jeu
+   ========================================================================== */
+
+.atr-welcome-calendar .atr-game-date {
+    gap: 4px;
+    margin: 14px 0;
+}
+
+.atr-welcome-calendar .atr-game-month {
+    margin: 0;
+    color: var(--pa-heading);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.atr-welcome-calendar .atr-game-year {
+    margin: 0;
+    color: var(--pa-muted);
+    font-size: 10px;
+}
+
+/* Limite la largeur, notamment sur téléphone. */
+.atr-welcome-calendar .atr-month-calendar {
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto;
+}
+
+.atr-welcome-calendar .atr-calendar-table {
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 3px;
+    background: transparent;
+    color: var(--pa-text);
+    font: 11px/1.3 "Montserrat", sans-serif;
+}
+
+/* Initiales des jours. */
+.atr-welcome-calendar .atr-calendar-table th {
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--pa-muted);
+    font-size: 9px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Dates du mois. */
+.atr-welcome-calendar .atr-calendar-table td {
+    height: 27px;
+    padding: 3px 0;
+    border: 0;
+    border-radius: 2px;
+    background: transparent;
+    color: var(--pa-text);
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Repère discret pour les week-ends. */
+.atr-welcome-calendar .atr-calendar-table td:nth-child(n + 6) {
+    background: var(--pa-rule);
+    color: var(--pa-heading);
+}
+
+/* Espace avant la météo. */
+.atr-welcome-calendar .atr-weather {
+    margin-top: 16px;
+}
+
+.atr-welcome-calendar .atr-weather-description {
+    margin-top: 6px;
+    color: var(--pa-muted);
+    font-size: 10px;
+}
+
+/* Accueil — Limiter la hauteur du calendrier et de la météo */
+#blanktheme .atr-welcome > .atr-welcome-calendar {
+    max-height: 360px;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pa-accent) transparent;
+    scrollbar-gutter: stable;
+}
+
+/* Barre de défilement pour Chrome et Safari */
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar {
+    width: 4px;
+}
+
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar-thumb {
+    background: var(--pa-accent);
+    border-radius: 4px;
+}
+
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar-track {
+    background: transparent;
+}
