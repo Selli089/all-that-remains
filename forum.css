@@ -6444,46 +6444,45 @@ tw:focus-visible {
     margin: 0 auto;
 }
 
-.atr-welcome-calendar .atr-calendar-table {
-    width: 100%;
-    margin: 0;
-    table-layout: fixed;
-    border: 0;
-    border-collapse: separate;
-    border-spacing: 3px;
-    background: transparent;
+/* Calendrier — grille de sept jours */
+.atr-welcome-calendar .atr-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 3px;
     color: var(--pa-text);
     font: 11px/1.3 "Montserrat", sans-serif;
 }
 
-/* Initiales des jours. */
-.atr-welcome-calendar .atr-calendar-table th {
+/* Chaque case du calendrier */
+.atr-welcome-calendar .atr-calendar-grid > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 27px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Initiales des jours */
+.atr-welcome-calendar .atr-calendar-grid > .atr-calendar-weekday {
     height: 24px;
-    padding: 0;
-    border: 0;
-    background: transparent;
     color: var(--pa-muted);
     font-size: 9px;
     font-weight: 500;
-    text-align: center;
 }
 
-/* Dates du mois. */
-.atr-welcome-calendar .atr-calendar-table td {
-    height: 27px;
-    padding: 3px 0;
-    border: 0;
-    border-radius: 2px;
-    background: transparent;
-    color: var(--pa-text);
-    text-align: center;
-    vertical-align: middle;
-}
-
-/* Repère discret pour les week-ends. */
-.atr-welcome-calendar .atr-calendar-table td:nth-child(n + 6) {
+/* Samedis et dimanches, en excluant les titres et cases vides */
+.atr-welcome-calendar .atr-calendar-grid > span:nth-child(7n+6):not(.atr-calendar-weekday):not(.atr-calendar-empty),
+.atr-welcome-calendar .atr-calendar-grid > span:nth-child(7n):not(.atr-calendar-weekday):not(.atr-calendar-empty) {
     background: var(--pa-rule);
     color: var(--pa-heading);
+}
+
+/* Neutraliser les éventuels sauts de ligne ajoutés par l’éditeur */
+.atr-welcome-calendar .atr-calendar-grid > br {
+    display: none;
 }
 
 /* Espace avant la météo. */
