@@ -6414,10 +6414,13 @@ tw:focus-visible {
 /* ==========================================================================
    Accueil — Calendrier du jeu
    ========================================================================== */
+.atr-welcome-calendar h2 {
+    margin-bottom: 4px;
+}
 
 .atr-welcome-calendar .atr-game-date {
     gap: 4px;
-    margin: 14px 0;
+    margin: 0 0 14px;
 }
 
 .atr-welcome-calendar .atr-game-month {
