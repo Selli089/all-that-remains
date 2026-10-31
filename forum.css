@@ -6519,3 +6519,27 @@ tw:focus-visible {
 #blanktheme .atr-welcome-calendar::-webkit-scrollbar-track {
     background: transparent;
 }
+
+/* Accueil — Limiter la hauteur du calendrier et de la météo */
+#blanktheme .atr-welcome > .atr-welcome-calendar {
+    max-height: 360px;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pa-accent) transparent;
+    scrollbar-gutter: stable;
+}
+
+/* Barre de défilement pour Chrome et Safari */
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar {
+    width: 4px;
+}
+
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar-thumb {
+    background: var(--pa-accent);
+    border-radius: 4px;
+}
+
+#blanktheme .atr-welcome-calendar::-webkit-scrollbar-track {
+    background: transparent;
+}
