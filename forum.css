@@ -6543,3 +6543,67 @@ tw:focus-visible {
 #blanktheme .atr-welcome-calendar::-webkit-scrollbar-track {
     background: transparent;
 }
+/* ==========================================================================
+   Accueil — Météo sous la Voûte et à l’extérieur
+   ========================================================================== */
+
+.atr-welcome-calendar .atr-weather-report {
+    display: block;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--pa-rule);
+    text-align: left;
+}
+
+.atr-weather-report .atr-weather-zone + .atr-weather-zone {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--pa-rule);
+}
+
+/* Intitulé du bulletin. */
+.atr-weather-report .atr-weather-zone-title {
+    margin-bottom: 16px;
+    color: var(--pa-muted);
+    font: 500 9px/1.5 "Montserrat", sans-serif;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+/* Trois indicateurs de largeur identique. */
+.atr-weather-report .atr-weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.atr-weather-report .atr-weather-metric {
+    min-width: 0;
+    text-align: center;
+}
+
+/* Icônes. */
+.atr-weather-report .atr-weather-metric > em {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--pa-accent);
+    font-size: 19px;
+    font-style: normal;
+    line-height: 1;
+}
+
+/* Températures et précipitations. */
+.atr-weather-report .atr-weather-value {
+    display: block;
+    margin: 0;
+    color: var(--pa-heading);
+    font: 600 13px/1.4 "Montserrat", sans-serif;
+}
+
+/* Journée, nuit et pluviométrie. */
+.atr-weather-report .atr-weather-label {
+    display: block;
+    margin-top: 4px;
+    color: var(--pa-muted);
+    font: 400 9px/1.5 "Montserrat", sans-serif;
+}
