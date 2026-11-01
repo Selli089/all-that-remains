@@ -6616,9 +6616,3 @@ tw:focus-visible {
 .atr-record-step > div + div {
   margin-top: 12px;
 }
-
-/* Conserver des paragraphes lisibles */
-.atr-record-step > div,
-.atr-record-note > div {
-  line-height: 1.7;
-}
