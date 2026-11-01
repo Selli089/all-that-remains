@@ -6602,3 +6602,23 @@ tw:focus-visible {
     color: var(--pa-muted);
     font: 400 9px/1.5 "Montserrat", sans-serif;
 }
+
+/* ==========================================
+   ATR — ENCYCLOPÉDIE
+   Espacement des informations essentielles
+   ========================================== */
+
+.atr-record-note > div + div {
+  margin-top: 12px;
+}
+
+/* Espacement entre les paragraphes des sections */
+.atr-record-step > div + div {
+  margin-top: 12px;
+}
+
+/* Conserver des paragraphes lisibles */
+.atr-record-step > div,
+.atr-record-note > div {
+  line-height: 1.7;
+}
