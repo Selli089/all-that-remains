@@ -1569,9 +1569,9 @@ a.fa-mention {
     font-weight: 700;
     font-size: var(--little-size);
 }
-
+/* Réserver une ligne au bouton Copier */
 #codeBox dt {
-    height: 0;
+    height: 30px;
     font-size: 0;
 }
 
