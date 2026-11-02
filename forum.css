@@ -6616,3 +6616,218 @@ tw:focus-visible {
 .atr-record-step > div + div {
   margin-top: 12px;
 }
+
+/* ==========================================================================
+   Moodboards des lieux — Fragments du lieu
+   ========================================================================== */
+
+.atr-place {
+    --place-bg: #eee7d6;
+    --place-text: #464a40;
+    --place-heading: #30392e;
+    --place-muted: #696b5d;
+    --place-rule: #ccc4ad;
+    --place-accent: #727d61;
+
+    width: 100%;
+    max-width: 900px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: clamp(16px, 4%, 36px);
+    box-sizing: border-box;
+    border: 1px solid var(--place-rule);
+    background: var(--place-bg);
+    color: var(--place-text);
+    font: 12px/1.6 "Montserrat", sans-serif;
+}
+
+html[data-color-scheme="dark"] .atr-place {
+    --place-bg: #263128;
+    --place-text: #d0ccbd;
+    --place-heading: #e8ddc8;
+    --place-muted: #b4b09c;
+    --place-rule: #495442;
+    --place-accent: #aaa178;
+}
+
+.atr-place,
+.atr-place * {
+    box-sizing: border-box;
+}
+
+/* Bandeau supérieur et signature */
+
+.atr-place .atr-place-brand,
+.atr-place .atr-place-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    color: var(--place-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.atr-place .atr-place-brand {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--place-rule);
+}
+
+.atr-place .atr-place-brand strong {
+    color: var(--place-heading);
+    font-weight: 500;
+}
+
+/* Nom et localisation du lieu */
+
+.atr-place .atr-place-head {
+    padding: 28px 0;
+    text-align: center;
+}
+
+.atr-place .atr-place-kicker {
+    color: var(--place-muted);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.atr-place .atr-place-title {
+    margin: 10px 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--place-heading);
+    font: 500 clamp(32px, 5vw, 64px)/1.1
+        "Cormorant Garamond", Georgia, serif;
+    text-transform: none;
+    overflow-wrap: anywhere;
+}
+
+.atr-place .atr-place-location {
+    color: var(--place-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Images — recadrage sans déformation */
+
+.atr-place .atr-place-panorama {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: var(--place-rule);
+}
+
+.atr-place .atr-place-panorama img,
+.atr-place .atr-place-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Quatre détails d’ambiance */
+
+.atr-place .atr-place-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+    margin-top: 14px;
+}
+
+.atr-place .atr-place-detail {
+    min-width: 0;
+}
+
+.atr-place .atr-place-picture {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--place-rule);
+}
+
+.atr-place .atr-place-caption {
+    margin-top: 6px;
+    color: var(--place-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+/* Séparateur et citation */
+
+.atr-place .atr-place-divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 26px 8% 18px;
+    color: var(--place-accent);
+    font-size: 12px;
+}
+
+.atr-place .atr-place-divider::before,
+.atr-place .atr-place-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--place-rule);
+}
+
+.atr-place .atr-place-quote {
+    margin: 0;
+    padding: 0;
+    color: var(--place-heading);
+    font: italic 400 23px/1.4
+        "Cormorant Garamond", Georgia, serif;
+    text-align: center;
+}
+
+.atr-place .atr-place-note {
+    margin-top: 18px;
+    color: var(--place-muted);
+    font-size: 10px;
+    text-align: center;
+}
+
+.atr-place .atr-place-footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid var(--place-rule);
+    font-size: 8px;
+}
+
+/* Écrans étroits */
+
+@media (max-width: 600px) {
+    .atr-place .atr-place-brand,
+    .atr-place .atr-place-footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .atr-place .atr-place-head {
+        padding: 22px 0;
+    }
+
+    .atr-place .atr-place-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .atr-place .atr-place-panorama {
+        aspect-ratio: 16 / 9;
+    }
+
+    .atr-place .atr-place-quote {
+        font-size: 21px;
+    }
+}
