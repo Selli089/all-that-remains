@@ -1,15 +1,15 @@
 /* ==========================================================================
    ALL THAT REMAINS — FEUILLE DE STYLE
-   Version lisible et nettoyée — 26 octobre 2026
+   Version lisible et nettoyée · 4 novembre 2026
 
    ORGANISATION
    • Sections 01 à 24 : socle Blank Theme et modules.
    • Sections suivantes : personnalisations All That Remains.
-   • Les adaptations mobiles et sombres restent près de leurs composants.
+   • Les ajustements tardifs sont regroupés aux sections 54 à 59.
    • L’ordre des sections conserve les priorités de la feuille d’origine.
    • Les replis de compatibilité et les préfixes utiles sont conservés.
    • Les classes utilisées par les templates ou scripts ne sont pas renommées.
-   • Aucun changement volontaire de couleurs, dimensions ou interlignes.
+   • Annonces reprend la couleur de Notifications dans les deux thèmes.
 
    SOMMAIRE
    01 — BASE BLANK THEME / Animation des notifications
@@ -63,6 +63,14 @@
    49 — ALL THAT REMAINS — CATÉGORIES REPLIABLES
    50 — Description placée sous le titre d’une catégorie
    51 — Groupes — Présentation des membres en cartes
+   52 · Mini-profil des personnages
+   53 · Mini-profil : ajustements visuels
+   54 · Wombat : boutons et libellés de contact
+   55 · Accueil : calendrier du jeu
+   56 · Accueil : météo
+   57 · Annexes : espacement et texte en gras
+   58 · Moodboards des lieux
+   59 · Bouton Annonces
    ========================================================================== */
 
 /* ==========================================================================
@@ -6359,47 +6367,24 @@ tw:focus-visible {
 
 
 /* ==========================================================
-   Wombat — Liens de contact nommés
+   54 · Wombat : boutons et libellés de contact
    ========================================================== */
 
-#wombat .atr-profile-contact .field_uneditable a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 32px;
-    padding: 7px 10px;
-    box-sizing: border-box;
-    border: 1px solid var(--profile-rule);
-    color: var(--profile-text);
-    font: 10px/1.4 "Montserrat", sans-serif;
-    text-align: center;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-}
-
-#wombat .atr-profile-contact .field_uneditable a:hover {
-    background: var(--profile-inset);
-}
-
-/* ==========================================================
-   Wombat — Libellés lisibles en clair et en sombre
-   ========================================================== */
+/* Libellés lisibles en clair et en sombre */
 
 #wombat.atr-profile .atr-profile-fields .profile_field > label,
 #wombat.atr-profile .atr-profile-fields .profile_field > label * {
     color: var(--profile-muted, #696b5d) !important;
 }
 
-/* ==========================================================
-   Wombat — Boutons de contact
-   ========================================================== */
+/* Wombat — Boutons de contact */
 
 #wombat.atr-profile .atr-profile-contact > div {
     width: 100%;
     min-width: 0;
 }
 
+#wombat .atr-profile-contact .field_uneditable a,
 #wombat.atr-profile .atr-profile-contact a {
     display: flex;
     justify-content: center;
@@ -6416,12 +6401,13 @@ tw:focus-visible {
     overflow-wrap: anywhere;
 }
 
+#wombat .atr-profile-contact .field_uneditable a:hover,
 #wombat.atr-profile .atr-profile-contact a:hover {
     background: var(--profile-inset);
 }
 
 /* ==========================================================================
-   Accueil — Calendrier du jeu
+   55 · Accueil : calendrier du jeu
    ========================================================================== */
 .atr-welcome-calendar h2 {
     margin-bottom: 4px;
@@ -6526,31 +6512,8 @@ tw:focus-visible {
     background: transparent;
 }
 
-/* Accueil — Limiter la hauteur du calendrier et de la météo */
-#blanktheme .atr-welcome > .atr-welcome-calendar {
-    max-height: 360px;
-    min-height: 0;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--pa-accent) transparent;
-    scrollbar-gutter: stable;
-}
-
-/* Barre de défilement pour Chrome et Safari */
-#blanktheme .atr-welcome-calendar::-webkit-scrollbar {
-    width: 4px;
-}
-
-#blanktheme .atr-welcome-calendar::-webkit-scrollbar-thumb {
-    background: var(--pa-accent);
-    border-radius: 4px;
-}
-
-#blanktheme .atr-welcome-calendar::-webkit-scrollbar-track {
-    background: transparent;
-}
 /* ==========================================================================
-   Accueil — Météo sous la Voûte et à l’extérieur
+   56 · Accueil : météo sous la Voûte et à l’extérieur
    ========================================================================== */
 
 .atr-welcome-calendar .atr-weather-report {
@@ -6612,22 +6575,28 @@ tw:focus-visible {
     font: 400 9px/1.5 "Montserrat", sans-serif;
 }
 
-/* ==========================================
-   ATR — ENCYCLOPÉDIE
-   Espacement des informations essentielles
-   ========================================== */
+/* ==========================================================================
+   57 · Annexes : espacement et texte en gras
+   ========================================================================== */
 
-.atr-record-note > div + div {
-  margin-top: 12px;
+.atr-record-note > div + div,
+.atr-record-step > div + div {
+    margin-top: 12px;
 }
 
-/* Espacement entre les paragraphes des sections */
-.atr-record-step > div + div {
-  margin-top: 12px;
+/* Annexes : mettre en valeur les passages en gras */
+.atr-record:not(.atr-character) .atr-record-body strong {
+    color: #3e5936;
+    font-weight: 700;
+}
+
+/* Même accent, adapté au mode sombre */
+[data-color-scheme="dark"] .atr-record:not(.atr-character) .atr-record-body strong {
+    color: #e3c584;
 }
 
 /* ==========================================================================
-   Moodboards des lieux — Fragments du lieu
+   58 · Moodboards des lieux : fragments du lieu
    ========================================================================== */
 
 .atr-place {
@@ -6815,7 +6784,7 @@ html[data-color-scheme="dark"] .atr-place {
     font-size: 8px;
 }
 
-/* Écrans étroitss */
+/* Écrans étroits */
 
 @media (max-width: 600px) {
     .atr-place .atr-place-brand,
@@ -6841,17 +6810,11 @@ html[data-color-scheme="dark"] .atr-place {
     }
 }
 
-/* Annexes : mettre en valeur les passages en gras */
-.atr-record:not(.atr-character) .atr-record-body strong {
-    color: #3e5936;
-    font-weight: 700;
-}
+/* ==========================================================================
+   59 · Bouton Annonces
+   ========================================================================== */
 
-/* Même accent, adapté au mode sombre */
-[data-color-scheme="dark"] .atr-record:not(.atr-character) .atr-record-body strong {
-    color: #e3c584;
-}
-
+/* Au repos, même fond que #notiffi_button dans les deux thèmes. */
 #atr-annonces {
     display: inline-flex;
     align-items: center;
@@ -6859,7 +6822,7 @@ html[data-color-scheme="dark"] .atr-place {
     margin-right: 6px;
     padding: 0 10px;
     border-radius: 10px;
-    background: var(--neutralDark, #e8e4d8);
+    background: var(--neutral, #f7f3e9);
     color: var(--textColor, #263329);
     font-size: 14px;
     font-weight: 400;
@@ -6877,6 +6840,7 @@ html[data-color-scheme="dark"] .atr-place {
     outline-offset: 2px;
 }
 
+/* Le doré et la pastille signalent les annonces non lues. */
 #atr-annonces.atr-annonces-nouveau {
     background: #e8d4a4;
     color: #42351e;
