@@ -7075,3 +7075,19 @@ a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatre
 .wombat .profile_pseudo {
     text-transform: capitalize;
 }
+
+/* ATR : majuscule au début de chaque mot du pseudo dans le Wombat */
+#wombat .atr-profile-name {
+    text-transform: capitalize;
+}
+
+/* ATR : citations lisibles dans la prévisualisation des messages */
+#preview blockquote:not(.atr-record-quote) {
+    background: var(--post-inset, var(--neutralDark));
+    color: var(--post-text, var(--textColor));
+    border-left-color: var(--post-accent, var(--accentClr));
+}
+
+#preview blockquote:not(.atr-record-quote) cite {
+    color: inherit;
+}
