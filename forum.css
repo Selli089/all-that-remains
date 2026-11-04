@@ -7062,3 +7062,7 @@ html[data-color-scheme="dark"] .atr-place {
     font-size: 11px;
     line-height: 1.4;
 }
+/* ATR : masquer les boutons dans l’aperçu d’une mention */
+.tooltipster-base .main-tooltip .preview_contacts {
+    display: none !important;
+}
