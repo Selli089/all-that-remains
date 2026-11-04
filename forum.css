@@ -6935,3 +6935,36 @@ html[data-color-scheme="dark"] .atr-place {
     color: var(--reg-ink);
     font: 500 26px/1.15 "Cormorant Garamond", Georgia, serif;
 }
+
+/* Liens sociaux : aligner la colonne de texte sur l’avatar */
+.atr-dossier .atr-dossier-relation > .atr-dossier-copy {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+}
+
+.atr-dossier .atr-dossier-relation > .atr-dossier-copy > * {
+    flex-shrink: 0;
+}
+
+/* Dans le modèle actuel, la description est le seul div sans classe. */
+.atr-dossier .atr-dossier-relation > .atr-dossier-copy > div:not([class]) {
+    flex: 0 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--reg-accent) transparent;
+}
+
+/* Garder les liens visibles sans prendre trop de place sur le texte. */
+.atr-dossier .atr-dossier-relation .atr-dossier-nav {
+    margin-top: 6px;
+}
+
+/* Sur téléphone, laisser le texte s’étendre sous le portrait. */
+@media (max-width: 600px) {
+    .atr-dossier .atr-dossier-relation > .atr-dossier-copy {
+        max-height: none;
+    }
+}
