@@ -1634,6 +1634,17 @@ blockquote cite a {
     opacity: 0.8;
 }
 
+/* Blocs BBCode [code] : faire défiler le contenu sous le bouton Copier */
+.codebox:not(.spoiler):not(.hidecode) dd > .cont_code,
+.codebox:not(.spoiler):not(.hidecode) dd > code,
+.codebox:not(.spoiler):not(.hidecode) dd > pre {
+    display: block;
+    max-height: 260px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accentClr) transparent;
+}
+
 /* ==========================================================================
    20 — Profil simple et édition des champs : base
    ========================================================================== */
