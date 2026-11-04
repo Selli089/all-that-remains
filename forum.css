@@ -6851,3 +6851,46 @@ html[data-color-scheme="dark"] .atr-place {
 [data-color-scheme="dark"] .atr-record:not(.atr-character) .atr-record-body strong {
     color: #e3c584;
 }
+
+#atr-annonces {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-right: 6px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: var(--neutralDark, #e8e4d8);
+    color: var(--textColor, #263329);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#atr-annonces:hover {
+    filter: brightness(0.94);
+}
+
+#atr-annonces:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+#atr-annonces.atr-annonces-nouveau {
+    background: #e8d4a4;
+    color: #42351e;
+}
+
+[data-color-scheme="dark"] #atr-annonces.atr-annonces-nouveau {
+    background: #4b3d26;
+    color: #f4dba2;
+}
+
+#atr-annonces.atr-annonces-nouveau::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
