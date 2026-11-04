@@ -7066,3 +7066,12 @@ html[data-color-scheme="dark"] .atr-place {
 .tooltipster-base .main-tooltip .preview_contacts {
     display: none !important;
 }
+/* ATR : majuscule au début de chaque mot des pseudos */
+a[href^="/u"]:not([href^="/user"]),
+a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatremains.forumactif.com/user"]),
+.post_pseudo,
+.userlist_pseudo,
+.preview_pseudo,
+.wombat .profile_pseudo {
+    text-transform: capitalize;
+}
