@@ -6840,3 +6840,14 @@ html[data-color-scheme="dark"] .atr-place {
         font-size: 21px;
     }
 }
+
+/* Annexes : mettre en valeur les passages en gras */
+.atr-record:not(.atr-character) .atr-record-body strong {
+    color: #3e5936;
+    font-weight: 700;
+}
+
+/* Même accent, adapté au mode sombre */
+[data-color-scheme="dark"] .atr-record:not(.atr-character) .atr-record-body strong {
+    color: #e3c584;
+}
