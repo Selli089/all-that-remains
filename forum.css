@@ -6858,3 +6858,80 @@ html[data-color-scheme="dark"] .atr-place {
     border-radius: 50%;
     background: currentColor;
 }
+
+/* Dossiers personnels : fiches de liens et journal de RP */
+.atr-dossier .atr-dossier-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px 24px;
+}
+
+.atr-dossier .atr-dossier-copy {
+    flex: 1 1 230px;
+    min-width: 0;
+}
+
+.atr-dossier .atr-dossier-photo {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border: 1px solid var(--reg-rule);
+    background: var(--reg-tint);
+    object-fit: cover;
+    object-position: center;
+}
+
+.atr-dossier .atr-dossier-photo--main {
+    width: 200px;
+    aspect-ratio: 5 / 8;
+}
+
+.atr-dossier .atr-dossier-status {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 5px 9px;
+    border: 1px solid var(--reg-rule);
+    background: var(--reg-tint);
+    font: 11px/1.5 "Montserrat", sans-serif;
+}
+
+.atr-dossier .atr-dossier-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.atr-dossier .atr-dossier-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+}
+
+.atr-dossier .atr-dossier-columns > section {
+    flex: 1 1 235px;
+    min-width: 0;
+}
+
+.atr-dossier .atr-dossier-columns > .atr-record-note,
+.atr-dossier .atr-dossier-columns > .atr-record-section {
+    margin-top: 0;
+}
+
+.atr-dossier .atr-dossier-relation + .atr-dossier-relation,
+.atr-dossier .atr-dossier-rp + .atr-dossier-rp {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--reg-rule);
+}
+
+.atr-dossier .atr-dossier-name {
+    margin: 0 0 4px;
+    padding: 0;
+    color: var(--reg-ink);
+    font: 500 26px/1.15 "Cormorant Garamond", Georgia, serif;
+}
