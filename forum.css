@@ -7180,3 +7180,21 @@ a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatre
     }
 }
 
+/* Rapprocher les encarts des légendes */
+.atr-welcome-secondary .atr-pa-mini {
+    margin-top: 6px;
+    padding-top: 0;
+    min-height: 30px;
+}
+
+/* Afficher le favicon sans cadre */
+.atr-pa-mini .atr-community-links a {
+    border: 0;
+    background: transparent;
+}
+
+/* Garder un repère uniquement pour la navigation au clavier */
+.atr-pa-mini .atr-community-links a:hover:not(:focus-visible) {
+    outline: none;
+    opacity: 0.8;
+}
