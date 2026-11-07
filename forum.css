@@ -7211,3 +7211,20 @@ a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatre
     justify-content: flex-start;
     overflow-x: auto;
 }
+
+/* Fond transparent pour le panneau de smileys */
+#smiley-box,
+#smiley-box iframe {
+    background: transparent !important;
+}
+
+/* Évite le fond blanc de l’iframe en mode sombre */
+#smiley-box iframe {
+    color-scheme: light;
+}
+
+/* Fond du document affiché à l’intérieur de l’iframe */
+html#sceditor_smilies,
+body#sce_smilies_body {
+    background: transparent !important;
+}
