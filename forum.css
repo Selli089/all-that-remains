@@ -7091,3 +7091,92 @@ a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatre
 #preview blockquote:not(.atr-record-quote) cite {
     color: inherit;
 }
+
+/* PA : encarts compacts sous le staff et les prédéfinis. */
+.atr-welcome-secondary > :is(.atr-home-staff, .atr-home-wanted) {
+    display: flex;
+    flex-direction: column;
+}
+
+.atr-welcome-secondary .atr-pa-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.atr-pa-mini-title {
+    flex: none;
+    color: var(--pa-heading);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.atr-pa-mini-empty {
+    color: var(--pa-muted);
+    font-size: 10px;
+}
+
+.atr-pa-mini .atr-community-links {
+    display: flex;
+    gap: 5px;
+    min-width: 0;
+    margin: 0;
+    padding: 2px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    list-style: none;
+}
+
+.atr-pa-mini .atr-community-links > li {
+    flex: 0 0 auto;
+}
+
+.atr-pa-mini .atr-community-links a {
+    display: grid;
+    place-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 3px;
+    border: 1px solid var(--pa-rule);
+    border-radius: 3px;
+}
+
+.atr-pa-mini .atr-community-links a:is(:hover, :focus-visible) {
+    outline: 1px solid var(--pa-accent);
+}
+
+.atr-pa-mini .atr-community-icon,
+.atr-pa-mini .atr-community-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.atr-pa-mini .atr-community-badge {
+    display: block;
+    width: auto;
+    max-width: 88px;
+    max-height: 24px;
+    object-fit: contain;
+}
+
+/* En clair, la transparence du PNG dessine l’icône en vert.
+   En sombre, le PNG original s’affiche. */
+@supports (mask-image: url("")) or (-webkit-mask-image: url("")) {
+    html:not([data-color-scheme="dark"]) .atr-pa-mini .atr-community-icon {
+        --atr-vote-icon: url("https://res.cloudinary.com/lffofll0/image/upload/v1793836627/FavIcon.png");
+        background-color: #30392e;
+        -webkit-mask: var(--atr-vote-icon) center / contain no-repeat;
+        mask: var(--atr-vote-icon) center / contain no-repeat;
+    }
+
+    html:not([data-color-scheme="dark"]) .atr-pa-mini .atr-community-icon img {
+        visibility: hidden;
+    }
+}
+
