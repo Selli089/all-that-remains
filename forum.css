@@ -7198,3 +7198,16 @@ a[href^="https://allthatremains.forumactif.com/u"]:not([href^="https://allthatre
     outline: none;
     opacity: 0.8;
 }
+
+/* PA : placer les boutons sous les titres Topsites et Partenaires */
+.atr-welcome-secondary .atr-pa-mini {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+}
+
+.atr-pa-mini .atr-community-links {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+}
