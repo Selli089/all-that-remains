@@ -7530,3 +7530,22 @@ body#sce_smilies_body {
         max-height: 58vh;
     }
 }
+/* Bouton Archives : en haut à gauche */
+#atr-archives-button {
+    inset: 10px auto auto 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 35px;
+    padding: 0 10px !important;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* Panneau ouvert sous le bouton */
+#atr-archives-panel {
+    inset: 55px auto auto 10px;
+    transform: none;
+    width: min(350px, calc(100vw - 20px));
+    max-height: calc(100dvh - 140px);
+}
